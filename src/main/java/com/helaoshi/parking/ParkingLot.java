@@ -8,21 +8,25 @@ import java.util.List;
  */
 public class ParkingLot {
 
-    private int size;
+    private int capacity;
 
     private List<Car> cars;
 
-    public ParkingLot(int size) {
-        this.size = size;
-        cars = new ArrayList<>(size);
+    public ParkingLot(int capacity) {
+        this.capacity = capacity;
+        cars = new ArrayList<>(capacity);
     }
 
     public boolean canPark() {
-        return cars.size() < size;
+        return cars.size() < capacity;
+    }
+
+    public int getRemainSize() {
+        return capacity - cars.size();
     }
 
     public Car park(Car car) {
-        if (cars.size() < size) {
+        if (cars.size() < capacity) {
             cars.add(car);
             return car;
         }
