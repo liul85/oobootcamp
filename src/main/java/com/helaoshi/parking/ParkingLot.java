@@ -25,6 +25,10 @@ public class ParkingLot {
         return capacity - cars.size();
     }
 
+    public int getFreeRate() {
+        return (capacity - cars.size()) / capacity;
+    }
+
     public Car park(Car car) {
         if (cars.size() < capacity) {
             cars.add(car);
@@ -39,5 +43,9 @@ public class ParkingLot {
             return car;
         }
         return null;
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }

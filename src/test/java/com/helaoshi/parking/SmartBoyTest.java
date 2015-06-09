@@ -12,11 +12,11 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by liangliu on 6/9/15.
  */
-public class ParkingGirlTest {
-    ParkingGirl girl;
-    ParkingLot parkingLot1 = new ParkingLot(3);
-    ParkingLot parkingLot2 = new ParkingLot(1);
-    ParkingLot parkingLot3 = new ParkingLot(2);
+public class SmartBoyTest {
+    SmartBoy smartBoy;
+    ParkingLot parkingLot1 = new ParkingLot(8);
+    ParkingLot parkingLot2 = new ParkingLot(4);
+    ParkingLot parkingLot3 = new ParkingLot(7);
 
     @Before
     public void setUp() throws Exception {
@@ -25,13 +25,13 @@ public class ParkingGirlTest {
         parkingLots.add(parkingLot2);
         parkingLots.add(parkingLot3);
 
-        girl = new ParkingGirl(parkingLots);
+        smartBoy = new SmartBoy(parkingLots);
     }
 
     @Test
-    public void testShouldParkCarToTheLotWhichHasMoreFreeLots() throws Exception {
-        assertThat(girl.park(new Car()), is(parkingLot1));
-        assertThat(girl.park(new Car()), is(parkingLot1));
-        assertThat(girl.park(new Car()), is(parkingLot3));
+    public void testShouldParkToLotWhichHasMoreFreeRate() throws Exception {
+        assertThat(smartBoy.park(new Car()), is(parkingLot1));
+        assertThat(smartBoy.park(new Car()), is(parkingLot3));
+        assertThat(smartBoy.park(new Car()), is(parkingLot2));
     }
 }
