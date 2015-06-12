@@ -12,8 +12,8 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by liangliu on 6/9/15.
  */
-public class SmartBoyTest {
-    SmartBoy smartBoy;
+public class HighRateParkingStrategyTest {
+    ParkingMan smartBoy;
     ParkingLot parkingLot1 = new ParkingLot(8);
     ParkingLot parkingLot2 = new ParkingLot(4);
     ParkingLot parkingLot3 = new ParkingLot(7);
@@ -25,7 +25,7 @@ public class SmartBoyTest {
         parkingLots.add(parkingLot2);
         parkingLots.add(parkingLot3);
 
-        smartBoy = new SmartBoy(parkingLots);
+        smartBoy = new ParkingMan(parkingLots, new HighRateParkingStrategy());
     }
 
     @Test

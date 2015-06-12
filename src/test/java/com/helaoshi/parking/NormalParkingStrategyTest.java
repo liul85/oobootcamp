@@ -13,9 +13,9 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by liangliu on 6/9/15.
  */
-public class ParkingBoyTest {
+public class NormalParkingStrategyTest {
 
-    private ParkingBoy boy;
+    private ParkingMan boy;
 
     @Before
     public void setUp() throws Exception {
@@ -28,7 +28,7 @@ public class ParkingBoyTest {
         parkingLots.add(parkingLot2);
         parkingLots.add(parkingLot3);
 
-        boy = new ParkingBoy(parkingLots);
+        boy = new ParkingMan(parkingLots, new NormalParkingStrategy());
     }
 
     @Test

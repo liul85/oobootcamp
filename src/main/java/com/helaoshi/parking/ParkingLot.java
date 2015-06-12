@@ -10,7 +10,13 @@ public class ParkingLot {
 
     private int capacity;
 
-    private List<Car> cars;
+    private List<Car> cars = new ArrayList<>();
+    private String name;
+
+    public ParkingLot(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
+    }
 
     public ParkingLot(int capacity) {
         this.capacity = capacity;
@@ -47,5 +53,17 @@ public class ParkingLot {
 
     public int getCapacity() {
         return capacity;
+    }
+
+    @Override
+    public String toString() {
+        return "ParkingLot{" +
+                "capacity=" + capacity +
+                ", cars=" + cars +
+                '}';
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
