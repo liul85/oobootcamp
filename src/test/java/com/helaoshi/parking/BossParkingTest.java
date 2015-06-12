@@ -80,7 +80,7 @@ public class BossParkingTest {
     public void printAllParkingLots() {
         manager.print();
         assertEquals(
-                "ParkingManager:manager\n" +
+                "Manager:manager\n" +
                 "    ParkingMan:boy\n" +
                 "    ParkingLot name4\n" +
                 "\n" +

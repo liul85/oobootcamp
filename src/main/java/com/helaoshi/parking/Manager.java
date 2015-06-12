@@ -43,7 +43,7 @@ public class Manager extends ParkingMan{
     }
 
     public void print() {
-        String typeString = String.format("%s:%s", "ParkingManager", getName());
+        String typeString = String.format("%s:%s", getType(), getName());
         System.out.println(typeString);
         parkingMans.stream().forEach(man -> System.out.println(man.report()));
         System.out.print(getParkingLotsString());

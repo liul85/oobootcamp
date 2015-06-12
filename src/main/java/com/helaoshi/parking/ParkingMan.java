@@ -75,7 +75,7 @@ public class ParkingMan {
 
     protected StringBuilder getParkingLotsString() {
         StringBuilder sb = new StringBuilder();
-        this.parkingLots.stream().forEach(lot -> sb.append(String.format("    %s %s", "ParkingLot", lot.getName()).concat("\n")));
+        this.parkingLots.stream().forEach(lot -> sb.append(String.format("    %s %s", lot.getType(), lot.getName()).concat("\n")));
         return sb;
     }
 

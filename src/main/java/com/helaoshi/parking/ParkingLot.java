@@ -66,4 +66,10 @@ public class ParkingLot {
     public String getName() {
         return this.name;
     }
+
+    public String getType(){
+        String cls = getClass().toString();
+        int index = cls.lastIndexOf(".");
+        return cls.substring(index + 1);
+    }
 }
